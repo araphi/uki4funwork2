@@ -1,3 +1,3 @@
 module.exports = {
-  url : "mongodb://<dbuser>:<dbpassword>@ds149122.mlab.com:49122/notable"
+  url : "mongodb://uki4:uki1234@ds139775.mlab.com:39775/notable_uki4"
 };
