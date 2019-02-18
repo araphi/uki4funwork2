@@ -1,49 +1,115 @@
-<!DOCTYPE html>
-<html>
+
+<!DOCTYPE HTML>
+<html lang="zxx">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Notes CRUD Client</title>
+	<title>Note</title>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="keywords" content="Classic Sign In Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements"
+	/>
+	  <script src="app/public/js/jquery-3.2.1.js"></script>
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
 
-  <script src="app/public/js/jquery-3.2.1.js"></script>
-
-  <style>
-    input[type='submit'], button, [aria-label]{
-      cursor: pointer;
-    }
-    #spoiler{
-      display: none;
-    }
-  </style>
-
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- Meta tag Keywords -->
+	<!-- css files -->
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<!-- Style-CSS -->
+	<link rel="stylesheet" href="css/fontawesome-all.css">
+	<!-- Font-Awesome-Icons-CSS -->
+	<!-- //css files -->
+	<!-- web-fonts -->
+	<link href="//fonts.googleapis.com/css?family=Reem+Kufi&amp;subset=arabic" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+	<!-- //web-fonts -->
+	<style>
+		input[type='submit'], button, [aria-label]{
+			cursor: pointer;
+		}
+		#spoiler{
+			display: none;
+		}
+	</style>
 </head>
-  <body>
 
-<form action="javascript:void(0);" method="POST" onsubmit="addNote()">
-  <input type="text" id="add-title" placeholder="New Note Title">
-  <input type="text" id="add-body" placeholder="New Note Body">
-  <input type="submit" value="Add">
-</form>
+<body>
+	<!-- title -->
+	<h1>
+		<span>C</span>lassic
+		<span>S</span>ign
+		<span>I</span>n
+		<span>F</span>orm</h1>
+	<!-- //title -->
+	<!-- content -->
+	<div class="sub-main-w3">
+		<form  action="javascript:void(0);" method="POST" onsubmit="addNote()">
+			<div class="form-style-agile">
+				<label>
+					Title
+					<i class="fas fa-user"></i>
+				</label>
+				<input type="text" id="add-title" placeholder="New Note Title">
+			</div>
+			<div class="form-style-agile">
+				<label>
+					Body
+					<i class="fas fa-unlock-alt"></i>
+				</label>
+				<input type="text" id="add-body" placeholder="New Note Body">
+			</div>
 
-<div id="spoiler" role="aria-hidden">
-  <form action="javascript:void(0);" method="POST" onsubmit="saveEdit()">
-    <input type="text" id="edit-title">
-    <input type="text" id="edit-body">
-    <input type="submit" value="Edit">
-  </form>
-</div>
+			<input type="submit" value="Add">
 
-<table>
-  <tr>
-    <th>ID</th>
-    <th>Title</th>
-    <th>Text</th>
-  </tr>
-    <tbody id="notes">
-    </tbody>
-</table>
+		</form>
+		<div id="spoiler" role="aria-hidden">
+			<form action="javascript:void(0);" method="POST" onsubmit="saveEdit()">
+				<div class="form-style-agile">
+					<label>
+						Title
+						</label>
+				<input type="text" id="edit-title"> &nbsp;
+				</div>
+				<div class="form-style-agile">
+					<label>Body</label>
 
-<!-- <script src="app/public/js/script1.js"></script> -->
-<script src="/app/public/js/script2.js"></script>
-<!-- <script src="app/public/js/script3.js"></script> -->
+
+				<input type="text" id="edit-body">
+				</div>
+				<input type="submit" value="Edit">
+			</form>
+		</div>
+
+		<table>
+			<tr>
+				<th>ID</th>
+				<th>Title</th>
+				<th>Text</th>
+			</tr>
+				<tbody id="notes">
+				</tbody>
+		</table>
+
+		<script src="app/public/js/script2.js"></script>
+	</div>
+
+	<!-- //content -->
+
+	<!-- copyright -->
+	<div class="footer">
+		<p>&copy; 2019 Classic Sign In Form. All rights reserved | Design by
+			Araphi
+		</p>
+	</div>
+	<!-- //copyright -->
+
 </body>
+
 </html>
