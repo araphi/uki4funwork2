@@ -5,6 +5,9 @@
 <head>
 	<title>Note</title>
 	<!-- Meta tag Keywords -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8" />
 	<meta name="keywords" content="Classic Sign In Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements"
@@ -36,6 +39,9 @@
 		}
 		#spoiler{
 			display: none;
+		}
+		.table{
+			width: 350px;
 		}
 	</style>
 </head>
@@ -73,12 +79,12 @@
 			<form action="javascript:void(0);" method="POST" onsubmit="saveEdit()">
 				<div class="form-style-agile">
 					<label>
-						Title
+						Name
 						</label>
 				<input type="text" id="edit-title"> &nbsp;
 				</div>
 				<div class="form-style-agile">
-					<label>Body</label>
+					<label>Date Of Birth</label>
 
 
 				<input type="text" id="edit-body">
@@ -87,16 +93,20 @@
 			</form>
 		</div>
 
-		<table>
+		<div class="container">
+
+	  <table class="table table-bordered">
+	    <thead>
 			<tr>
 				<th>ID</th>
 				<th>Name</th>
 				<th>DOB</th>
 			</tr>
+		</thead>
 				<tbody id="notes">
 				</tbody>
 		</table>
-
+</div>
 		<script src="app/public/js/script2.js"></script>
 	</div>
 
