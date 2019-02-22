@@ -9,7 +9,7 @@ function addNote(){
   var params = "text="+text+"&title="+title;
 
   $.post(baseUrl+"notes",params,function(data){
-      document.getElementById("notes").innerHTML = "<tr><td >"+data._id+"</td><td id='title1'></td><td id='body1'></td></tr>";
+      document.getElementById("notes").innerHTML = "<tr><td id='id1'>"+data._id+"</td><td id='title1'></td><td id='body1'></td></tr><tr><td id='id1'>"+data._id+"</td><td id='title2'></td><td id='body2'></td></tr>";
       document.getElementById("notes2").innerHTML ="<tr><td><button onclick='displayNote()'>Get Note</button></td><td><button onclick='editNote()'>Edit</button></td><td><button onclick='deleteNote()'>Delete</button></td></tr>"
       document.getElementById("add-title").value = "";
       document.getElementById("add-body").value = "";
@@ -23,6 +23,8 @@ function displayNote(){
   $.get(baseUrl+"notes/"+id,function(data) {
       document.getElementById("title1").innerHTML = data.title;
       document.getElementById("body1").innerHTML =  data.text;
+      document.getElementById("title2").innerHTML = data.title;
+      document.getElementById("body2").innerHTML =  data.text;
     });
 
 }
@@ -43,6 +45,8 @@ function saveEdit(){
   $.ajax({url:baseUrl+"notes/" +id,contentType:"application/x-www-form-urlencoded",type:"PUT",data:params,success:function(data) {
       document.getElementById("title1").innerHTML = data.title;
       document.getElementById("body1").innerHTML =  data.text;
+      document.getElementById("title2").innerHTML = data.title;
+      document.getElementById("body2").innerHTML =  data.text;
       document.getElementById('spoiler').style.display = 'none';
     }
 });
@@ -57,6 +61,8 @@ function deleteNote(){
     document.getElementById("id1").innerHTML = "";
     document.getElementById("title1").innerHTML = "";
     document.getElementById("body1").innerHTML =  "";
+    document.getElementById("title2").innerHTML = "";
+    document.getElementById("body2").innerHTML =  "";
   }});
 
 }
