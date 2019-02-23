@@ -59,6 +59,7 @@ function deleteNote(){
 var id = document.getElementById ( "id2" ).innerText;
   $.ajax({url:baseUrl+"notes/"+id,contentType:"application/x-www-form-urlencoded",type:"DELETE",success:function(data) {
     document.getElementById("id1").innerHTML = "";
+    document.getElementById("id1").innerHTML = "";
     document.getElementById("title1").innerHTML = "";
     document.getElementById("body1").innerHTML =  "";
     document.getElementById("title2").innerHTML = "";
