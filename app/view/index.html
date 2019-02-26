@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8" />
 	<meta name="keywords" content="Classic Sign In Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements"
@@ -21,6 +22,14 @@
 		function hideURLbar() {
 			window.scrollTo(0, 1);
 		}
+		$(document).ready(function(){
+  $("#hide").click(function(){
+    $("hideform").hide();
+  });
+  $("#show").click(function(){
+    $("showform").show();
+  });
+});
 	</script>
 	<!-- Meta tag Keywords -->
 	<!-- css files -->
@@ -55,7 +64,7 @@
 		<span>APP</span></h1>
 	<!-- //title -->
 	<!-- content -->
-	<div class="sub-main-w3">
+	<div class="sub-main-w3" id="hideform">
 		<form  action="javascript:void(0);" method="POST" onsubmit="addNote()">
 			<div class="form-style-agile">
 				<label>
@@ -72,10 +81,10 @@
 				<input type="text" id="add-body" placeholder="Date Of Birth">
 			</div>
 
-			<input type="submit" value="Add">
+			<input type="submit" value="Add" id="hide">
 
 		</form>
-		<div id="spoiler" role="aria-hidden">
+		<div id="spoiler showform" role="aria-hidden">
 			<form action="javascript:void(0);" method="POST" onsubmit="saveEdit()">
 				<div class="form-style-agile">
 					<label>
@@ -89,7 +98,7 @@
 
 				<input type="text" id="edit-body">
 				</div>
-				<input type="submit" value="Edit">
+				<input type="submit" value="Edit" id="show">
 			</form>
 		</div>
 
@@ -100,7 +109,7 @@
 	  <table class="table table-hover">
 	    <thead>
 			<tr>
-			
+
 				<th>Name</th>
 				<th>DOB</th>
 			</tr>
