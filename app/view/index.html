@@ -22,16 +22,8 @@
 		function hideURLbar() {
 			window.scrollTo(0, 1);
 		}
-		$(document).ready(function(){
-  $("#hide").click(function(){
-    $("hideform").hide();
-  });
-  $("#show").click(function(){
-    $("showform").show();
-  });
-});
+		
 	</script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<!-- Meta tag Keywords -->
 	<!-- css files -->
 	<link rel="stylesheet" href="app/view/css/style.css" type="text/css" media="all" />
@@ -65,7 +57,7 @@
 		<span>APP</span></h1>
 	<!-- //title -->
 	<!-- content -->
-	<div class="sub-main-w3" id="hideform">
+	<div class="sub-main-w3">
 		<form  action="javascript:void(0);" method="POST" onsubmit="addNote()">
 			<div class="form-style-agile">
 				<label>
@@ -82,10 +74,10 @@
 				<input type="text" id="add-body" placeholder="Date Of Birth">
 			</div>
 
-			<input type="submit" value="Add" id="hide">
+			<input type="submit" value="Add">
 
 		</form>
-		<div id="spoiler showform" role="aria-hidden">
+		<div id="spoiler" role="aria-hidden">
 			<form action="javascript:void(0);" method="POST" onsubmit="saveEdit()">
 				<div class="form-style-agile">
 					<label>
@@ -99,7 +91,7 @@
 
 				<input type="text" id="edit-body">
 				</div>
-				<input type="submit" value="Edit" id="show">
+				<input type="submit" value="Edit">
 			</form>
 		</div>
 
